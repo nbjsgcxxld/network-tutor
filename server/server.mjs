@@ -7,6 +7,11 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
 // 这里以 DeepSeek 为例（免费，注册送额度）
 // 注册地址：https://platform.deepseek.com/
 const DEEPSEEK_API_KEY = 'sk-5bbf4331c84340c1ac1a8865f9105377'.trim()  // 替换为你的密钥
